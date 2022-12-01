@@ -1,0 +1,22 @@
+{
+  "name": "crudm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "mongod": "^2.0.0",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.7.3",
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "devDependencies": {
+    "handlebars": "^4.5.0"
+  }
+}

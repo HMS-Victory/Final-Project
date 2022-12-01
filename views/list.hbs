@@ -1,0 +1,23 @@
+<h3>
+    <a href="/" class="btn btn-danger">Create New</a>
+</h3>
+<table class="table-striped table">
+    <thead>
+        <tr>
+            <th>Task Object</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td id="task">{{this}}</td>
+            <td>
+                <a class="btn btn-success update-btn" href="/{{this._id}}">Update</a>
+                <a class="btn btn-danger delete-btn" href="/list/{{this._id}}" onclick="return confirm('Are you sure to delete this record?');">Delete
+                </i>
+                </a>
+            </td>
+        </tr> 
+        {{/each}}
+    </tbody>
+</table>
