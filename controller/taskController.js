@@ -1,16 +1,14 @@
 const express=require('express');
+const { ExpressHandlebars } = require('express-handlebars');
 const mongoose=require('mongoose');
 const Task=mongoose.model('Task');
 const router=express.Router();
 
-// I need to get this to work so that you can edit things in mongodb from the browser.
-// This is the ONLY thing I have left before this project is finished, If I finish this the project is finished.
-
 router.get("/", (req,res)=>{
     res.render("addOrEdit", {
         viewTitle: "Task" 
-    })
-})
+    });
+});
 
 router.post('/', (req,res)=>{
     if(req.body._id==""){
@@ -70,8 +68,6 @@ router.get('/list', (req, res)=>{
             res.render("list", {
                 list:docs
             });
-        }else{
-            console.log('an error occured when rendering the /list: '+err);
         }
     });
 });

@@ -4,16 +4,19 @@
 <table class="table-striped table">
     <thead>
         <tr>
-            <th>Task Object</th>
+            <th>Task Name</th>
+            <th>Task Description</th>
+            <th>Operations</th>
         </tr>
     </thead>
     <tbody>
         {{#each list}}
         <tr>
-            <td id="task">{{this}}</td>
+            <td id="task">{{this.task}}</td>
+            <td>{{this.description}}</td>
             <td>
-                <a class="btn btn-success update-btn" href="/{{this._id}}">Update</a>
-                <a class="btn btn-danger delete-btn" href="/list/{{this._id}}" onclick="return confirm('Are you sure to delete this record?');">Delete
+                <a class="btn btn-success" href="/{{this._id}}">Update</a>
+                <a class="btn btn-danger" href="/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record?');">Delete
                 </i>
                 </a>
             </td>
